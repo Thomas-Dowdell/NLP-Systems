@@ -8,7 +8,7 @@ import optimize
 import mos
 import develop_bias
 
-class Experimental_Transformer_XL():
+class Transformer_XL():
   def __init__(self, arg,
                name = None):
     '''
@@ -18,7 +18,7 @@ class Experimental_Transformer_XL():
     if name:
       self.name = name
     else:
-      self.name = 'Experimental-Transformer-XL'
+      self.name = 'Transformer-XL'
     batch_size = 128
     input_sequence_size = 10
     memory_sequence_size = 15
@@ -415,4 +415,4 @@ def argument():
 if __name__ == '__main__':
   arg = argument()
   
-  model = Experimental_Transformer_XL(arg)
+  model = Transformer_XL(arg)
