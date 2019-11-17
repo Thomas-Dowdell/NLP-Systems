@@ -12,7 +12,7 @@ Models Currently Implemented:
 - Neural GPU (arXiv:1511.08228)
 
 Current Codes Implemented:
-- Neural_GPU.py 
+- run_algorithmic_tasks.py 
   * runs the Neural GPU model on a variety of algorithmic tasks. The tasks available are seen in Dataset/tasks.py
 - run_small_lang.py 
   * analyzes the WT2 dataset or PTB dataset, using the any Transformer-model or RNN model.  
