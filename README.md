@@ -1,5 +1,5 @@
 # NLP-Systems
-Various NLP models and corresponding codes
+Various Deep Learning NLP models and corresponding codes
 
 Models Currently Implemented:
 - Transformer (arXiv:1706.03762)
