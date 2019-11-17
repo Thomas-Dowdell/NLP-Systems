@@ -12,10 +12,13 @@ Models Currently Implemented:
 - Neural GPU (arXiv:1511.08228)
 
 Current Codes Implemented:
-- Neural_GPU.py (runs the Neural GPU model on a variety of algorithmic tasks)
-- run_WT2.py (analyzes the WT2 dataset or PTB dataset using all Transformer models and RNN.py) (/Dataset/WT2/preprocess_WT2.py must be run before hand)
+- Neural_GPU.py 
+  *runs the Neural GPU model on a variety of algorithmic tasks. The tasks available are seen in Dataset/tasks.py
+- run_small_lang.py 
+  *analyzes the WT2 dataset or PTB dataset, using the any Transformer-model or RNN model.  
+  *Dataset/WT2/preprocess_WT2.py must be run beforehand.
 
 Requirements:
-- numpy
+- numpy (https://github.com/numpy/numpy)
 - sentencepiece (https://github.com/google/sentencepiece)
-- tensorflow (ver >= 1.14. Not tested on ver 2.0)
+- tensorflow (https://github.com/tensorflow/tensorflow) (ver >= 1.14. Not tested on ver 2.0)
