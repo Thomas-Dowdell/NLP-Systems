@@ -40,6 +40,11 @@ def build_and_run_model(model,
   print('Trainable Variables: {}'.format(np.sum([np.prod(v.shape.as_list()) for v in tf.trainable_variables()])))
   print('')
   
+  '''
+  Both the WT2 and PTB datasets are relatively small language modelling code.
+  On a single GPU, a single epoch too train should take less then an hour.
+  '''
+  
   if use_wt2:
     train_data = np.load('Datasets/WT2/WT2.train.npy')
     test_data = np.concatenate([np.load('Datasets/WT2/WT2.test.npy'), np.zeros([18, 176])], axis = 0)
