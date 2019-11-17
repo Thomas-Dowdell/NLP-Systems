@@ -58,9 +58,9 @@ def build_and_run_model(model,
     arg.input_vocab_size = arg.target_vocab_size = arg.vocab_size = 32001
     batch_size = 25
   else:
-    train_data = np.load('Dataset/PTB/Word/PTB.train.npy')
-    test_data = np.load('Dataset/PTB/Word/PTB.test.npy')
-    valid_data = np.load('Dataset/PTB/Word/PTB.valid.npy')
+    train_data = np.load('Dataset/PTB/PTB.train.npy')
+    test_data = np.load('Dataset/PTB/PTB.test.npy')
+    valid_data = np.load('Dataset/PTB/PTB.valid.npy')
     train_data = np.reshape(train_data,
                             [52, 809, 83])
     valid_data = np.reshape(valid_data[:3328],
