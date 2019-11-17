@@ -16,7 +16,7 @@ Current Codes Implemented:
   * runs the Neural GPU model on a variety of algorithmic tasks. The tasks available are seen in Dataset/tasks.py
 - run_small_lang.py 
   * analyzes the WT2 dataset or PTB dataset, using the any Transformer-model or RNN model.  
-  * datasets and preprocessing code (Dataset/WT2/preprocess_WT2.py and Dataset/WT2/preprocess_PTB.py) must be run beforehand.
+  * datasets and preprocessing code (Dataset/WT2/preprocess_WT2.py and Dataset/PTB/preprocess_PTB.py) must be run beforehand.
 
 Requirements:
 - numpy (https://github.com/numpy/numpy)
