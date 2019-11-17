@@ -40,17 +40,30 @@ def build_and_run_model(model,
   print('Trainable Variables: {}'.format(np.sum([np.prod(v.shape.as_list()) for v in tf.trainable_variables()])))
   print('')
   
-  train_data = np.load('Datasets/WT2/WT2.train.npy')
-  test_data = np.concatenate([np.load('Datasets/WT2/WT2.test.npy'), np.zeros([18, 176])], axis = 0)
-  valid_data = np.concatenate([np.load('Datasets/WT2/WT2.valid.npy'), np.zeros([70, 243])], axis = 0)
-  train_data = np.reshape(train_data,
-                          [25, 2961, 275])
-  valid_data = np.reshape(valid_data,
-                          [25, 316, 243])
-  test_data = np.reshape(test_data,
-                         [25, 360, 176])
-  arg.input_vocab_size = arg.target_vocab_size = arg.vocab_size = 32001
-  batch_size = 25
+  if use_wt2:
+    train_data = np.load('Datasets/WT2/WT2.train.npy')
+    test_data = np.concatenate([np.load('Datasets/WT2/WT2.test.npy'), np.zeros([18, 176])], axis = 0)
+    valid_data = np.concatenate([np.load('Datasets/WT2/WT2.valid.npy'), np.zeros([70, 243])], axis = 0)
+    train_data = np.reshape(train_data,
+                            [25, 2961, 275])
+    valid_data = np.reshape(valid_data,
+                            [25, 316, 243])
+    test_data = np.reshape(test_data,
+                           [25, 360, 176])
+    arg.input_vocab_size = arg.target_vocab_size = arg.vocab_size = 32001
+    batch_size = 25
+  else:
+    train_data = np.load('Dataset/PTB/Word/PTB.train.npy')
+    test_data = np.load('Dataset/PTB/Word/PTB.test.npy')
+    valid_data = np.load('Dataset/PTB/Word/PTB.valid.npy')
+    train_data = np.reshape(train_data,
+                            [52, 809, 83])
+    valid_data = np.reshape(valid_data[:3328],
+                            [52, 64, -1])
+    test_data = np.reshape(test_data[:3744],
+                           [52, 72, -1])
+    arg.input_vocab_size = arg.target_vocab_size = arg.vocab_size = 10001
+    batch_size = 52
   
 
   sess = tf.Session()
