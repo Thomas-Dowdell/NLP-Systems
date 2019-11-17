@@ -1,8 +1,6 @@
 import numpy as np
 import tensorflow as tf
 
-import sys
-sys.path.append('/home/tom/Desktop/Programming/Models/Utils')
 import util_code as utils
 import loss
 import optimize
